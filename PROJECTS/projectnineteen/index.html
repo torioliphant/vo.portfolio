@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nineteen</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="../../2.png" type="image/png">
+</head>
+<body>
+
+  <!-- Top sticky horizontal menu bar -->
+  <nav class="top-nav">
+    <ul class="nav-list">
+      <li class="logo"><img src="../../2.png" alt="Slide 1"></li>
+      <li class="name">Victoria Oliphant</li>
+      <li class="year">2026</li>
+      <li><a href="../../HOME/index.html">home</a></li>
+      <li><a href="../../resume.pdf" target="_blank">cv</a></li>
+      <li><a href="../../GALLERY/index.html">gallery</a></li>
+      <li><a href="../../ABOUT/index.html#contact">contact me!</a></li>
+    </ul>
+  </nav>
+
+  <!-- Collapsible vertical sidebar menu -->
+  <aside class="sidebar">
+  <div class="sidebar-content">
+    <br>
+    <a href="../../HOME/index.html" class="menu-item-link">
+      <div class="menu-item">
+        <h2>Home</h2>
+        <span>...</span>
+        <p>01</p>
+      </div>
+    </a>
+    <div class="menu-slider">
+  <div class="menu-track">
+    <a href="../projectnineteen/index.html" class="slide-link">
+      <img src="../../41.png" alt="Slide 1">
+    </a>
+    <button class="nav-button nav-next" data-direction="next">›</button>
+    
+    <button class="nav-button nav-prev" data-direction="prev">‹</button>
+    <a href="../../GALLERY/index.html" class="slide-link">
+      <img src="../../42.png" alt="Slide 2">
+    </a>
+    <button class="nav-button nav-next" data-direction="next">›</button>
+    
+    <button class="nav-button nav-prev" data-direction="prev">‹</button>
+    <a href="../../ABOUT/index.html" class="slide-link">
+      <img src="../../43.png" alt="Slide 3">
+    </a>
+  </div>
+</div>
+    <a href="../../DIGITAL/index.html" class="menu-item-link">
+      <div class="menu-item">
+        <h2>Digital</h2>
+        <span>...</span>
+        <p>03</p>
+      </div>
+    </a>
+    <a href="../../PHYSICAL/index.html" class="menu-item-link">
+      <div class="menu-item">
+        <h2>Physical</h2>
+        <span>...</span>
+        <p>04</p>
+      </div>
+    </a>
+    <a href="../../SOUND/index.html" class="menu-item-link">
+      <div class="menu-item">
+        <h2>Sound</h2>
+        <span>...</span>
+        <p>05</p>
+      </div>
+    </a>
+    <div class="sidebar-footer"> 
+      <h4><a href="../../ABOUT/index.html">about me</a></h4>
+      <h4><a href="../projectnineteen/index.html">featured work</a></h4> 
+    </div> 
+  </div>
+</aside>
+
+
+  <!-- Main content container -->
+  <div class="main-container">
+    <main>
+
+             <div class="grid-container" data-scroll data-scroll-speed="0.4">
+            <div class="title" style="grid-column: span 2;">
+                <h1>MilkMoney</h1>
+              <strong>OOH / Social Media Marketing  </strong><h2>Photoshop, Premiere Pro, After Effects, Illustrator, Canva, Figma, Capcut, Slack, Trello, Miro, Google Workspace</h2>
+            <div class="button-container">
+    <a href="https://www.milkmoney.com/" class="visit-button">VISIT SITE&#8599</a>
+         </div>
+                 </div>
+            
+            <div class="article" style="grid-column: span 4;">
+                <h3> MilkMoney is the world's leading outdoor advertising platform, working with entertainment's biggest names including Rihanna, Beyoncé, Sabrina Carpenter, and Billie Eilish. As a social media manager and designer, I provide comprehensive design services across the organization and create social content, edit video, design mockups, pitch decks, and web assets. My work generated over 36 million impressions through original content and earned media placements, with photo edits reposted by Tyler, The Creator (2M+ likes), Rare Beauty, Hit-Boy, and Guns N' Roses. Over seven months, I increased average monthly views by 171% (from 14K to 38K) while maintaining exceptionally low follower churn. This role demanded rapid-turnaround design execution across 1,000+ assets while supporting contracts valued between $100K–$1M.</h3>
+   <h2>Social Media Strategy, Content Creation, Video Editing, Photo Editing, Mockup Design, Presentation Design, Brand Development, Analytics &amp; Growth</h2>
+        
+                 </div>
+                 
+                 <br>
+        
+                 
+            <div class="gallery">
+                <div class="content-item" style="grid-column: span 6; position: relative;">
+        <video 
+            id="heroVideo"
+            width="100%" 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            style="width: 100%; height: 100%; margin: 0;">
+            <source 
+                media="(min-width: 780px)" 
+                src="ENDOFYEARREEL_2025landscape%20(1)%202.mp4" 
+                type="video/mp4">
+            <source 
+                media="(max-width: 779px)" 
+                src="ENDOFYEARREEL_2025vertical%20(1)%202.mp4" 
+                type="video/mp4">
+        </video>
+        
+          
+        <button 
+            id="unmuteBtn"
+            onclick="
+                var video = document.getElementById('heroVideo');
+                var btn = document.getElementById('unmuteBtn');
+                video.muted = !video.muted;
+                btn.innerHTML = video.muted ? '♫' : '♫×';
+            "
+            style="
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                background: rgba(255, 255, 255, 0.6);
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease;
+                z-index: 10;
+            "
+            onmouseover="this.style.background='rgba(225, 192, 192, 0.8)'"
+            onmouseout="this.style.background='rgba(254, 186, 186, 0.6)'">
+            ♫
+        </button>
+    </div>
+       
+            
+        <div class="content-item" style="grid-column: span 6;">      
+<br>    
+<h3> Photo-Editing </h3> 
+              </div>  
+                <div class="content-item" style="grid-column: span 3;">
+                    <img src="Mel%20-%20Live%20Nation%20-%20Beyonce%20-%2003%20-%20EDIT2.jpg" alt="Project 1 Sub Image 1" width="100%" >
+                </div>
+
+
+                
+               
+   <div class="content-item" style="grid-column: span 3;">
+                    <img src="caesarbabywme7edit.jpg" alt="Project 1 Sub Image 1" width="100%">
+                </div>
+                
+               
+                
+   <div class="content-item" style="grid-column: span 2;">
+                    <img src="sabrinamural6.jpg" alt="Project 1 Sub Image 1" width="100%">
+                </div>
+                
+                <div class="content-item" style="grid-column: span 2;">
+                    <img src="rhode9.25_EDIT2.jpg" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+<div class="content-item" style="grid-column: span 2;">
+                    <img src="ezgif-15089683ed5978.gif" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+      
+
+<div class="content-item" style="grid-column: span 6;">
+                    <img src="1.png" alt="Project 1 Sub Image 1" width="100%">
+                </div>
+
+
+<div class="content-item" style="grid-column: span 3;">
+                    <img src="6.png" alt="Project 1 Sub Image 1" width="100%">
+                </div>
+            
+                
+
+                
+                <div class="content-item" style="grid-column: span 3;">
+                    <img src="5.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+                
+
+                
+                  
+    <!--<video src="pureground4.mp4" width="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; margin: 0;"></video>-->
+
+            <div class="content-item" style="grid-column: span 6;">      
+ <br>  
+<h3> Motion </h3> 
+              </div> 
+   
+ <div class="content-item" style="grid-column: span 3;">
+                 <video src="HomeFeature%20(1)small.mp4" width="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; margin: 0;"></video>
+                </div>
+   
+ 
+ <div class="content-item" style="grid-column: span 3;">
+               <blockquote
+    class="instagram-media"
+    data-instgrm-permalink="https://www.instagram.com/reel/DP39aUECS2R/"
+    data-instgrm-version="14">
+  </blockquote>
+                </div>
+
+<script async src="https://www.instagram.com/embed.js"></script>
+             
+
+ <div class="content-item" style="grid-column: span 3;">
+                 <img src="ezgif-316be41cde157c.gif" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+<div class="content-item" style="grid-column: span 3;">
+                <video src="rhode_trim.mov" width="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; margin: 0;"></video>
+                </div>
+ 
+
+
+<div class="content-item" style="grid-column: span 1;">
+                <video src="shopping_cart2.mp4" width="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; margin: 0;"></video>
+                </div>
+ <div class="content-item" style="grid-column: span 1;">
+                <video src="-getstarted%20(1)small.mp4" width="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; margin: 0;"></video>
+                </div>
+
+  <div class="content-item" style="grid-column: span 1;">
+                 <img src="ezgif-6de62c6c1144141c.gif" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+  <div class="content-item" style="grid-column: span 1;">
+                 <img src="ezgif-2676f33fe04d8108.gif" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+<div class="content-item" style="grid-column: span 1;">
+                <video src="wildposters_folderconcept%20(1)small.mp4" width="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; margin: 0;"></video>
+                </div>
+
+<div class="content-item" style="grid-column: span 1;">
+                <video src="animation_test(1)%20(1)small.mp4" width="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; margin: 0;"></video>
+                </div>
+
+<div class="content-item" style="grid-column: span 6;">      
+            <br>  
+ <h3> Branding </h3>
+                </div>
+
+<div class="content-item" style="grid-column: span 6;">
+                    <img src="13.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+<div class="content-item" style="grid-column: span 6;">
+                    <img src="12.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+ <div class="content-item" style="grid-column: span 2;">
+                    <img src="sweetgreencollage.png" alt="Project 1 Sub Image 1" width="100%">
+                </div>
+                
+                <div class="content-item" style="grid-column: span 2;">
+                    <img src="sweetgreencollage2.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+<div class="content-item" style="grid-column: span 2;">
+                    <img src="sweetgreencollage3.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+<br>      <div class="content-item" id="mockups" style="grid-column: span 6;">
+            <h3> Mockups </h3> 
+                </div>
+                <div class="content-item" style="grid-column: span 6;">
+                    <img src="kosas.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+  <div class="content-item" style="grid-column: span 3;">
+                    <img src="Life%20Tower_plane3.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+ <div class="content-item" style="grid-column: span 3;">
+                    <img src="liquid%20iv%203%20(1).png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+ <div class="content-item" style="grid-column: span 3;">
+                    <img src="liquidivmock4.jpg" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+ <div class="content-item" style="grid-column: span 3;">
+                    <img src="NY%20Street%20Level%20(2)%20IV(Mockup).jpg" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+ <div class="content-item" style="grid-column: span 3;">
+                    <img src="SWAG2.jpg" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+ <div class="content-item" style="grid-column: span 3;">
+                    <img src="SWAG4.jpg" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+ <div class="content-item" style="grid-column: span 3;">
+                    <img src="osea_mock4.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+ <div class="content-item" style="grid-column: span 3;">
+                    <img src="phlur_mock4.png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+
+
+
+ <div class="content-item" style="grid-column: span 2;">
+                    <img src="Cym%20Bus(3).png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+ <div class="content-item" style="grid-column: span 2;">
+                    <img src="Cym2.2%20(1).png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+ <div class="content-item" style="grid-column: span 2;">
+                    <img src="Cym4.2%20(1).png" alt="Project 1 Sub Image 2" width="100%">
+                </div>
+            </div>
+        </div>  
+
+
+    
+    
+<div class="article article-centered" style="grid-column: span 6;">
+    <h3>METRICS – <br>
+
+36.1M Total Impressions Generated
+<br> 27K Site Visits Driven
+<br> 271-813 Estimated Customer Conversions
+<br> 171% Increase in Monthly Views (14K → 38K)
+<br> 584 Net Follower Growth with 0.86% Churn Rate
+
+<br><br>VOLUME –<br>
+
+1,000+ Video & Image Assets Created
+<br>50+ Custom PR Packages Designed
+<br>50+ High-Fidelity Mockups for Client Presentations
+<br>Supported contracts valued $100K–$1M
+
+<br><br>IMPACT –<br> 
+
+‣ Content reposted by Tyler, The Creator (17.6M followers, 2M+ likes)
+<br> ‣ Featured by Rare Beauty (8.5M followers, 46.7K likes)
+<br> ‣ Shared by Hit-Boy (850K followers)
+<br> ‣ Reposted by Guns N' Roses (8.8M followers, 56.4K likes)</h3>
+    <h2><br><br><br><br>Select Campaigns:
+<br> Don't Tap the Glass(Tyler, The Creator), Eau De Parfum (Rare Beauty), Mayhem (Lady Gaga),  Man's Best Friend (Sabrina Carptenter), DARE TO DREAM (Beats by Dre / Apple ft. Travis Scott), Sprinter, "Peach Please" (Kylie Jenner), LUX (Rosalía)</h2>
+</div>
+
+   
+
+
+<div class="social-icons">
+          <a href="https://www.instagram.com/milkmoney/?hl=en" target="_blank" rel="noopener">
+  <img src="7.png" alt="Insta" class="social-icon">
+</a>
+          <a href="https://www.tiktok.com/@milkmoney?lang=en" target="_blank" rel="noopener">
+  <img src="8.png" alt="Tiktok" class="social-icon">
+</a>
+
+         <a href="https://www.milkmoney.com/" target="_blank" rel="noopener">
+  <img src="9.png" alt="Web" class="social-icon">
+</a>
+
+         <a href="https://www.linkedin.com/company/milkmoneyinc" target="_blank" rel="noopener">
+  <img src="10.png" alt="Linkedin" class="social-icon">
+</a>
+
+          <a href="https://www.milkmoney.com/press" target="_blank" rel="noopener">
+  <img src="11.png" alt="News&Press" class="social-icon">
+</a>
+
+</div>
+<br>
+<br>
+    
+</main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>website by Victoria Oliphant</p>
+      <p>all &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rights &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; reserved</p>
+      <p>© 2026</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

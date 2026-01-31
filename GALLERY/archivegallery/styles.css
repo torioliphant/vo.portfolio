@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/nats');
+
+
+* {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: black;
+            color: white;
+            font-family: Albert Sans, sans-serif;
+        }
+     
+        .container {
+            padding: 25px;
+            max-width: 100%;
+            
+        }
+        
+        header {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -40px;
+        }
+
+        .logo-name {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .logo img{
+            width: 50px;
+            height: 50px;
+            
+            border-radius: 50%;
+        }
+        
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        
+        nav {
+            display: flex;
+            gap: 20px;
+            margin-left: 50px;
+            font-family: Nats, sans-serif;
+            line-height: 1;
+            
+            
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        nav a:hover {
+            color: orange;
+        }
+
+        .section-title {
+            margin: 30px 0 20px 0;
+            font-size: 24px;
+        }
+        
+    
+/* Fade-in Animation */
+/*
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+*/
+
+.media-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            /*
+            animation: fadeIn 2s ease-in-out forwards;
+            opacity: 0;
+            */
+        }
+
+     .media-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: calc(var(--progress)*3.5);
+    border-radius: 3%;
+}
+
+.media-item img,
+.media-item video {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    opacity: calc(var(--progress)*2);
+}
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .media-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .media-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+.grid-container {
+        max-width: 1200px;
+        margin-bottom: 30%;
+        margin-left: auto;  /* This centers the container */
+        margin-right: auto; /* This centers the container */
+        padding: 0 10px;  /* Maintains some side padding */
+    }
+
+ .title, .article {
+        padding: 10px;
+    }
+
+    .title h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+       
+    }
+
+    .title h2 {
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 15px;
+         width: 88%;
+    }
+
+    .article h3 {
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+
+.article img {
+        width: 60px;
+        border-radius: 55px;
+        margin-top: 50px;
+        margin-left: 1%;
+        opacity: calc(1 - var(--progress) * 2);
+    
+    }
+
+    /* Desktop styles */
+    @media screen and (min-width: 768px) {
+        .grid-container {
+            width: 95%;  /* Ensures container is responsive on smaller screens */
+            padding: 0 10px;
+        }
+
+        .title, .article {
+            position: absolute;
+            top: 0;
+        }
+
+        .title {
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 50%;
+        }
+
+        .title h1 {
+            font-size: 25px;
+            margin-bottom: -5px;
+        }
+
+        .title h2 {
+            font-size: 15px;
+            color: #808080;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 20px;
+        }
+
+        .article {
+            right: 20px;
+        
+        }
+
+        .article h3 {
+            font-size: 20px;
+            font-weight: 200;
+            color: white;
+            
+            margin-left: 60%
+        }
+    }
+/* Navigation Buttons */
+.navigation-buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    margin-top: 20px;
+}
+
+.close-button, .next-button {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.close-button {
+    margin-left: 15px;
+}
+
+.next-button {
+    margin-right: 15px;
+}
+
+.close-button:hover, .next-button:hover {
+    background-color: white;
+    color: black;
+}
+
+        
+footer {
+            height: 15vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 20px;
+            font-size: 13px; 
+        }
+
+ .footer-left, .footer-right {
+            padding-bottom: 10px;
+        }
+
+        @media (min-width: 768px) {
+        
+            
+        
+            footer {
+                padding: 20px;
+            }
+        }

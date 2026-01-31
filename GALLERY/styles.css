@@ -1,0 +1,648 @@
+/* --- Reset and body styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+
+        .container {
+            padding: 25px;
+            max-width: 100%;
+            
+        }
+           
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.media-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+padding-top: 100px;
+            
+            /*
+            animation: fadeIn 2s ease-in-out forwards;
+            opacity: 0;
+            */
+        }
+
+     .media-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: calc(var(--progress)*3.5);
+    border-radius: 3%;
+}
+
+.media-item img,
+.media-item video {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    opacity: calc(var(--progress)*2);
+}
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .media-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .media-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+.grid-container {
+        max-width: 1200px;
+        margin-bottom: 30%;
+        margin-left: auto;  /* This centers the container */
+        margin-right: auto; /* This centers the container */
+        padding: 0 10px;  /* Maintains some side padding */
+    }
+
+ .title, .article {
+        padding: 10px;
+     text-align: left;
+    }
+
+    .title h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+       
+    }
+
+    .title h2 {
+        font-size: 10px;
+        color: #a3a1a1;
+        margin-bottom: 15px;
+         width: 88%;
+    }
+
+    .article h3 {
+        margin-top: 150px;
+        font-size: 7.5px;
+        font-weight: 300;
+    }
+
+.article img {
+        width: 36px;
+        border-radius: 55px;
+        margin-top: 16px;
+        margin-left: 1%;
+        opacity: calc(1 - var(--progress) * 2);
+    
+    }
+
+    /* Desktop styles */
+    @media screen and (min-width: 768px) {
+        .grid-container {
+            width: 95%;  /* Ensures container is responsive on smaller screens */
+            padding: 0 10px;
+        }
+
+        .title, .article {
+            position: absolute;
+            top: 0;
+        }
+
+        .title {
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 50%;
+        }
+
+        .title h1 {
+            font-size: 25px;
+            margin-bottom: -5px;
+        }
+
+        .title h2 {
+            font-size: 10px;
+            color: #808080;
+            margin-bottom: 20px;
+        }
+
+        .article {
+            right: 20px;
+        
+        }
+      
+.article img {
+       
+        margin-left: 60%;
+      
+    
+    }
+
+
+
+        .article h3 {
+            font-size: 8px;
+            font-weight: 200;
+  margin-top: 30px;
+            
+            margin-left: 60%;
+        }
+    }
+/* Navigation Buttons */
+.navigation-buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    margin-top: 20px;
+}
+
+.close-button, .next-button {
+    color: #808080;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.close-button {
+    margin-left: 15px;
+}
+
+.next-button {
+    margin-right: 15px;
+}
+
+.close-button:hover, .next-button:hover {
+    background-color: white;
+    color: black;
+}
+
+        @media (min-width: 768px) {
+        
+            
+        
+            footer {
+                padding: 20px;
+            }
+        }
+
+body {
+  margin: 0;
+  background-color: white;
+  color: black;
+  font-family: "Stack Sans Text";
+  transition: background-color 0.6s ease-in-out;
+}
+
+/* --- Top nav --- */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: antiquewhite;
+  backdrop-filter: blur(6px);
+  /* border-bottom: 1px solid white;*/
+  z-index: 51;
+}
+
+.nav-list {
+  display: flex;
+  align-items: baseline;
+  padding: 0.64rem 2rem;
+  list-style: none;
+  margin: 0;
+  width: 110%;
+justify-content: space-evenly;
+font-size: 10px;
+box-sizing: border-box;
+
+}
+
+
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-list li a:hover {
+  color: #d8b9bd;
+}
+
+
+.nav-list .logo,
+.nav-list .year {
+  color: #b59297;
+  font-size: .6rem;
+margin-top: 2px;
+}
+
+.nav-list .logo img {
+position: fixed;
+left: 10px;
+margin-top: -16px;
+width: 1.5rem;
+}
+
+.nav-list .name  {
+margin-left: 124px;
+}
+
+
+/* --- Hero banner --- */
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 45vh;
+  margin-top: 2rem;
+}
+
+.banner-track {
+  display: flex;
+  animation: scrollBanner 30s linear infinite;
+  /* width will now be set dynamically by JS */
+}
+
+@keyframes scrollBanner {
+  100% { transform: translateX(-50%); } /* move by half the track */
+}
+
+.banner-track img {
+  height: 100%; /* Let the image keep its natural height */
+  max-height: 45vh; /* Constrain to container if needed */
+  width: auto;
+  margin-right: 2rem;
+}
+
+.hero-title {
+  font-size: 8vw;
+  font-weight: 700;
+  line-height: 0.9;
+  text-align: center;
+  position: fixed;
+  margin-top: -10vh; 
+  right: 10px;
+
+
+}
+
+.hero-title img {
+width: 40vw;
+position: fixed;
+right: 122px;
+top: 22%;
+content: url('1.png')
+ 
+
+}
+
+
+
+
+
+/* --- Sidebar --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16rem;
+  height: 100%;
+  background-color: #fff9ebb3;
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  z-index: 50;
+ 
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+margin-top: 15px;
+}
+
+.sidebar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item h2, .menu-item h3 {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.menu-item span {
+  letter-spacing: 3px;
+  opacity: 0.6;
+  text-align: center;
+  flex: 1;
+}
+
+.menu-item p {
+  color: #888;
+font-size: .5rem;
+}
+.menu-slider { 
+  width: 100%; 
+  min-height: 14rem; /* Increased even more */
+  overflow-x: hidden; 
+  overflow-y: hidden; 
+  position: relative;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+margin-bottom: -4.5rem;
+}
+
+.menu-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+}
+
+.menu-track .slide-link {
+  flex-shrink: 0;
+  width: 95%; /* Increased to 95% - much larger */
+  display: block;
+}
+
+.menu-track img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-button {
+  flex-shrink: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  display: flex; /* Changed back to flex */
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  margin: 0;
+  padding: 0 0.25rem;
+  opacity: 1; /* Use opacity instead of display */
+  pointer-events: auto;
+}
+
+.nav-button:hover {
+  color: #000;
+}
+
+.nav-button:active {
+  color: #666;
+}
+
+/* Hide buttons by default */
+.nav-button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Show buttons when visible */
+.nav-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar-footer {
+  position: fixed;
+  bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0; 
+}
+
+.sidebar-footer h4 {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove any padding */
+  line-height: 1.5; /* Tight line height */
+  font-size: 10px;
+font-weight: 100;
+}
+
+.sidebar-footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar-footer a:hover {
+  color: #645759;
+}
+
+/* Sidebar hover highlight */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 15px;
+  position: relative;
+  --highlight-top: 0px;
+  --highlight-height: 0px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* The sliding highlight box */
+.sidebar-content::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  width: calc(100% + 3rem);
+  top: var(--highlight-top);
+  height: var(--highlight-height);
+  background-color: var(--highlight-color);
+  opacity: 0;
+  transition: top 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.6s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sidebar-content.highlight-active::before {
+  opacity: 0.5;
+}
+
+/* When NOT active, no transition - instant hide */
+.sidebar-content:not(.highlight-active)::before {
+  opacity: 0 !important;
+}
+
+/* Footer hover styles */
+.sidebar-footer h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 10px;
+  font-weight: 100;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* --- Main container --- */
+.main-container {
+  margin-left: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+}
+
+main p {
+  max-width: 40rem;
+}
+
+/* --- Footer --- */
+.footer {
+  text-align: left;
+  font-size: 0.5rem;
+  color: #b5acac;
+  padding: 1rem 1.5rem;
+  bottom: 0;
+  position: fixed;
+  line-height: .1px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+.sidebar {
+    width: 40%; /* wider for visibility */
+    font-size: 0.8rem;
+    position: fixed;
+
+  }
+
+  .sidebar-content {
+margin-top: -9px;
+line-height: 50px;
+}
+
+  /* Adjust main container so it doesn’t overlap the sidebar */
+  .main-container {
+    margin-left: 40%;
+  }
+
+
+ 
+  .sidebar p, 
+  .sidebar img,
+  .menu-slider, .sidebar h3 {
+    display: none;
+  }
+
+
+ 
+
+  main h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  main p {
+    font-size: 0.85rem;
+  }
+
+  .hero-banner {
+    height: 100vh;
+  }
+
+
+  .footer {
+    bottom: 0;
+    padding-left: 1.25rem;
+  }
+
+  .menu-slider {
+    height: 4rem;
+  }
+ .menu-slider { max-height: 0 !important;}
+
+.nav-list .name {
+margin-left: .1px;
+}
+
+  .banner-track {
+ height: 100vh }
+
+  .hero-title {
+ z-index: 50;
+margin-top: -581px;
+padding-right: 3px;
+}
+
+.banner-track img {
+  height: 100%; /* Let the image keep its natural height */
+  max-height: 98vh; /* Constrain to container if needed */
+  width: auto;
+  margin-right: 2rem;
+}
+
+.hero-title img {
+width: 49vw;
+position: fixed;
+right: 5.5%;
+top: 60%;
+content: url('7.png');
+
+}
+
+
+
+}

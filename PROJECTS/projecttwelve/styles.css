@@ -1,0 +1,704 @@
+/* --- Reset and body styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+body {
+  margin: 0;
+  background-color: white;
+  color: black;
+  font-family: "Stack Sans Text";
+  transition: background-color 0.6s ease-in-out;
+}
+
+/* --- Top nav --- */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: antiquewhite;
+  backdrop-filter: blur(6px);
+  /* border-bottom: 1px solid white;*/
+  z-index: 51;
+}
+
+.nav-list {
+  display: flex;
+  align-items: baseline;
+  padding: 0.64rem 2rem;
+  list-style: none;
+  margin: 0;
+  width: 110%;
+justify-content: space-evenly;
+font-size: 10px;
+box-sizing: border-box;
+
+}
+
+
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-list li a:hover {
+  color: #d8b9bd;
+}
+
+
+.nav-list .logo,
+.nav-list .year {
+  color: #b59297;
+  font-size: .6rem;
+margin-top: 2px;
+}
+
+.nav-list .logo img {
+position: fixed;
+left: 10px;
+margin-top: -16px;
+width: 1.5rem;
+}
+
+.nav-list .name  {
+margin-left: 124px;
+}
+
+
+/* --- Hero banner --- */
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 45vh;
+  margin-top: 2rem;
+}
+
+.banner-track {
+  display: flex;
+  animation: scrollBanner 30s linear infinite;
+  /* width will now be set dynamically by JS */
+}
+
+@keyframes scrollBanner {
+  100% { transform: translateX(-50%); } /* move by half the track */
+}
+
+.banner-track img {
+  height: 100%; /* Let the image keep its natural height */
+  max-height: 45vh; /* Constrain to container if needed */
+  width: auto;
+  margin-right: 2rem;
+}
+
+.hero-title {
+  font-size: 8vw;
+  font-weight: 700;
+  line-height: 0.9;
+  text-align: center;
+  position: fixed;
+  margin-top: -10vh; 
+  right: 10px;
+
+
+}
+
+.hero-title img {
+width: 40vw;
+position: fixed;
+right: 122px;
+top: 22%;
+content: url('1.png')
+ 
+
+}
+
+
+
+
+
+/* --- Sidebar --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16rem;
+  height: 100%;
+  background-color: #fff9ebb3;
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  z-index: 50;
+ 
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+margin-top: 15px;
+}
+
+.sidebar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item h2, .menu-item h3 {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.menu-item span {
+  letter-spacing: 3px;
+  opacity: 0.6;
+  text-align: center;
+  flex: 1;
+}
+
+.menu-item p {
+  color: #888;
+font-size: .5rem;
+}
+ 
+ 
+.menu-slider { 
+  width: 100%; 
+  min-height: 14rem; /* Increased even more */
+  overflow-x: hidden; 
+  overflow-y: hidden; 
+  position: relative;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+margin-bottom: -4.5rem;
+}
+
+.menu-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+}
+
+.menu-track .slide-link {
+  flex-shrink: 0;
+  width: 95%; /* Increased to 95% - much larger */
+  display: block;
+}
+
+.menu-track img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-button {
+  flex-shrink: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  display: flex; /* Changed back to flex */
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  margin: 0;
+  padding: 0 0.25rem;
+  opacity: 1; /* Use opacity instead of display */
+  pointer-events: auto;
+}
+
+.nav-button:hover {
+  color: #000;
+}
+
+.nav-button:active {
+  color: #666;
+}
+
+/* Hide buttons by default */
+.nav-button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Show buttons when visible */
+.nav-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+.sidebar-footer {
+  position: fixed;
+  bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0; 
+}
+
+.sidebar-footer h4 {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove any padding */
+  line-height: 1.5; /* Tight line height */
+  font-size: 10px;
+font-weight: 100;
+}
+
+.sidebar-footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar-footer a:hover {
+  color: #645759;
+}
+
+/* Sidebar hover highlight */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 15px;
+  position: relative;
+  --highlight-top: 0px;
+  --highlight-height: 0px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.digital-highlight-box {
+  position: absolute;
+  left: -1.5rem;
+  width: calc(100% + 3rem);
+  height: 40px; /* adjust if needed to match your menu item height */
+  top: 357px; /* adjust this value to position it correctly under "Digital" */
+  background-color: #ede4e5;
+  pointer-events: none;
+  z-index: 0; /* behind everything */
+}
+
+
+/* The sliding highlight box */
+.sidebar-content::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  width: calc(100% + 3rem);
+  top: var(--highlight-top);
+  height: var(--highlight-height);
+  background-color: var(--highlight-color);
+  opacity: 0;
+  transition: top 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.6s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sidebar-content.highlight-active::before {
+  opacity: 0.5;
+}
+
+/* When NOT active, no transition - instant hide */
+.sidebar-content:not(.highlight-active)::before {
+  opacity: 0 !important;
+}
+
+/* Footer hover styles */
+.sidebar-footer h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 10px;
+  font-weight: 100;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* --- Main container --- */
+.main-container {
+  margin-left: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 1rem;
+  margin-top: 3rem;
+
+}
+
+main h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+}
+
+main p {
+  max-width: 40rem;
+}
+
+
+
+
+
+
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Grid Layout for Project Pages */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin: 0 15%;
+}
+
+/* Title Section Styling */
+.title h1 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.title h2, .article h2 {
+    font-size: 12px;
+    font-weight: normal;
+    color: #7f7f7f;
+    margin-top: .1px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+
+    
+}
+
+/* Article Section Styling */
+.article h3 {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+strong {
+color: #b59297;
+animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+
+}
+/* Gallery Section Styling */
+.gallery {
+    display: contents; /* This makes the gallery div behave as if it doesn't exist in the grid */
+    
+}
+
+
+.content-item {
+    margin-bottom: 10px;
+    animation: fadeIn 4s ease-in-out forwards;
+    opacity: 0;
+    
+}
+
+.content-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+   
+    min-height: 100px; 
+}
+
+.content-item iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Adjust aspect ratio as needed */
+    min-height: 200px;
+    border: none;
+   
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    margin-top: 20px;
+}
+
+.close-button, .next-button {
+    color: #d8b9bd;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.close-button {
+    margin-left: 15px;
+}
+
+.next-button {
+    margin-right: 15px;
+}
+
+.close-button:hover, .next-button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+ .button-container {
+        display: flex;
+       margin-top: 23px;
+        align-items: center;
+     animation: fadeIn 2s ease-in-out forwards;
+    opacity: 0;
+     
+    
+    }
+
+    .visit-button {
+        width: 90px;
+        padding: 7px;
+        border: 2px solid #b59297;
+        color: #b59297;
+        background: transparent;
+        border-radius: 50px;
+        font-size: 12.5px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .visit-button:hover {
+        box-shadow: 0 5px 0 #d68d97, 0 0 0 #d68d97 inset;
+        color: #d68d97;
+        border-color: #d68d97;
+    }
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+audio {
+    width: 300px;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+#playPauseButton {
+    margin-top: 10px;
+    
+        padding: 10px;
+        border: 2px solid white;
+        color: white;
+        background: transparent;
+        border-radius: 50px;
+        font-size: 14.5px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        position: relative;
+}
+
+ #playPauseButton:hover {
+        box-shadow: 0 0 10px hotpink, 0 0 20px hotpink inset;
+        color: hotpink;
+        border-color: hotpink;
+    }
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        margin: 0 20px;
+    }
+    
+    .title, .article, .content-item {
+        grid-column: span 1 !important; /* Override inline styles for mobile */
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    
+  
+  .article {
+margin-left: 20%;}
+}
+
+
+
+
+/* --- Footer --- */
+.footer {
+  text-align: left;
+  font-size: 0.5rem;
+  color: #b5acac;
+  padding: 1rem 1.5rem;
+  bottom: 0;
+  position: fixed;
+  line-height: .1px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+.sidebar {
+    width: 40%; /* wider for visibility */
+    font-size: 0.8rem;
+    position: fixed;
+
+  }
+
+  .sidebar-content {
+margin-top: -9px;
+line-height: 50px;
+}
+
+  /* Adjust main container so it doesn’t overlap the sidebar */
+  .main-container {
+    margin-left: 40%;
+  }
+
+
+ 
+  .sidebar p, 
+  .sidebar img,
+  .menu-slider, .sidebar h3 {
+    display: none;
+  }
+
+
+ 
+
+  main h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  main p {
+    font-size: 0.85rem;
+  }
+
+  .hero-banner {
+    height: 100vh;
+  }
+
+
+  .footer {
+    bottom: 0;
+    padding-left: 1.25rem;
+  }
+
+  .menu-slider {
+    height: 4rem;
+  }
+ .menu-slider { max-height: 0 !important;}
+
+.nav-list .name {
+margin-left: .1px;
+}
+
+  .banner-track {
+ height: 100vh }
+
+  .hero-title {
+ z-index: 50;
+margin-top: -581px;
+padding-right: 3px;
+}
+
+.banner-track img {
+  height: 100%; /* Let the image keep its natural height */
+  max-height: 98vh; /* Constrain to container if needed */
+  width: auto;
+  margin-right: 2rem;
+}
+
+.hero-title img {
+width: 49vw;
+position: fixed;
+right: 5.5%;
+top: 60%;
+content: url('7.png');
+
+}
+.digital-highlight-box {
+  position: absolute;
+  left: -1.5rem;
+  width: calc(100% + 3rem);
+  height: 72px; /* adjust if needed to match your menu item height */
+  top: 218px; /* adjust this value to position it correctly under "Digital" */
+  background-color: #ede4e5;
+  pointer-events: none;
+  z-index: 0; /* behind everything */
+}
+
+
+}
